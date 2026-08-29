@@ -1,4 +1,6 @@
 import java.util.*;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 enum RoomType {
     NON_AC,AC,LUXURY,SUITE
 }
@@ -97,6 +99,7 @@ public class Hotel {
 
             System.out.println("Enter the choice:");
             int choice = sc.nextInt();
+            int Roomnumber;
 
             switch (choice) {
                 case 1:
@@ -148,7 +151,7 @@ public class Hotel {
                     }
 
                     System.out.println("Enter the room number:");
-                    int Roomnumber = sc.nextInt();
+                    Roomnumber = sc.nextInt();
 
                     if (!rooms.containsKey(Roomnumber)) {
                         System.out.println("Room does not exist");
